@@ -5,6 +5,7 @@ import hello.hellospring.domain.Member;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
@@ -57,6 +58,10 @@ class MemoryMemberRepositoryTest {
         repository.save(member2);
 
         List<Member> result = repository.findAll();
+
+        List<Member> test = new ArrayList<>();
+
+
 
         assertThat(result.size()).isEqualTo(2);
 
